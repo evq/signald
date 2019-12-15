@@ -1,4 +1,5 @@
-FROM gradle:jdk${JAVA_VERSION:-8}
+ARG JAVA_IMAGE=gradle:jdk8
+FROM $JAVA_IMAGE
 
 COPY . /tmp/src
 WORKDIR /tmp/src
