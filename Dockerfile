@@ -24,6 +24,6 @@ RUN mkdir -p /var/run/signald
 RUN chown signald /var/run/signald
 
 USER signald
-VOLUME /home/signald/.config/signal
+VOLUME /home/signald/.config/signald
 VOLUME /var/run/signald
 ENTRYPOINT ["/usr/local/bin/signald"]
