@@ -26,4 +26,4 @@ RUN chown signald /var/run/signald
 USER signald
 VOLUME /home/signald/.config/signald
 VOLUME /var/run/signald
-ENTRYPOINT ["/usr/local/bin/signald"]
+CMD ["sh", "-c", "rm -f /var/run/signald/signald.sock && /usr/local/bin/signald"]
